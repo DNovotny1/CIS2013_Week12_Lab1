@@ -3,6 +3,7 @@
 #include <string>
 using namespace std;
 
+
 class Human {
 private:
 	int legs, arms;
@@ -44,19 +45,28 @@ public:
 
 };
 
+
+//class Man : public Human, public Ape {
 class Man: public Human {
 public:
 
 	bool hasEgo = true;
 	string pee = "standing";
-
-
 };
+
+
+class Woman : public Human {
+public:
+
+	bool hasEgo = false;
+	string pee = "sitting";
+};
+
 
 int main() {
 	string input;
 	Man bob;
-	Human sue;
+	Woman sue;
 	//bob.setHair();
 
 	
@@ -68,6 +78,8 @@ int main() {
 	sue.setLegs();
 
 	cout << sue.name << " has " << sue.getLegs() << " legs & " << sue.getArms() << " arms and their hair color is " << sue.hair << "\n";
+
+	cout << sue.name << "has an ego?" << sue.hasEgo << endl;
 
 	cin >> input;
 
