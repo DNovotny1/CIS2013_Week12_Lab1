@@ -4,13 +4,26 @@
 using namespace std;
 
 class Person {
+private:
+	int legs, arms;
+	
 public:
-	int legs = 2, arms = 2;
 	string hair, name;
 
 	Person() { 
 		setName();
 		setHair(); 
+		legs = 2;
+		arms = 2;
+
+	}
+
+	int getLegs() {
+		return legs;
+	}
+
+	int getArms() {
+		return arms;
 	}
 
 	void setName() {
@@ -32,9 +45,9 @@ int main() {
 	Person sue;
 	//bob.setHair();
 
-	cout << bob.name << " has " << bob.legs << " legs & " << bob.arms << " arms and their hair color is " <<bob.hair << "\n";
+	cout << bob.name << " has " << bob.getLegs() << " legs & " << bob.getArms() << " arms and their hair color is " <<bob.hair << "\n";
 
-	cout << sue.name << " has " << sue.legs << " legs & " << sue.arms << " arms and their hair color is " << sue.hair << "\n";
+	cout << sue.name << " has " << sue.getLegs() << " legs & " << sue.getArms() << " arms and their hair color is " << sue.hair << "\n";
 
 	cin >> input;
 
